@@ -1,0 +1,110 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static './css/index.css' %}">
+    <link rel="stylesheet" href="{% static './css/formulario.css' %}">
+    <link rel="shortcut icon" href="{% static './media/imagenes/imageninicial1.jpg' %}">
+   
+</head>
+
+<body>
+
+    {% block contenido %}
+
+    
+    {% endblock %}
+
+    
+    <footer class="footer" id="contacto">
+        
+        <div class="container3">
+            <div class="footer-row">
+
+                <div class="footer-links">
+                    
+                    <section id="formSec" class="formSec">
+                        <form action="https://sheetdb.io/api/v1/swbypo2ko8wyt" method="POST" id="sheetdb-form">
+                          <h1>Hace tus consultas</h1>
+              
+                            <div class="form">
+                              <label for="name">Nombre y Apellido:</label>   
+                              <div id="error-name"></div>
+                              <input type="text" id="name" name="data[name]" class="claseFormulario" onkeyup="validate()"/>
+                            </div>
+              
+                            <div class="form">
+                              <label for="email">Email:</label>
+                              <div id="error-email"></div>
+                              <input type="email" id="email" name="data[email]" class="claseFormulario"  onkeyup="validate()"/>
+                            </div>
+              
+                            <div class="form">
+                              <label for="comentario">Mensajes:</label>
+                              <div id="error-comentario"></div>
+                              <textarea id="comentario" name="data[comentario]" rows="10" class="claseFormulario"  onkeyup="validate()"></textarea>
+                            </div>
+                          
+                           
+                            <div class="form">
+                              <button type="submit" id="submit" class="enviar">Enviar!</button>
+                            </div>
+              
+                        </form>
+                      </section>
+                      
+                  </div>
+
+
+                <div class="footer-links">
+                  <h4>Contacto</h4>
+                    <ol>
+                        <li><h5>Teléfono</h5> </li>
+                        <li><h5>(+123)4567 4534</h5> </li>
+                    </ol>
+
+                    <br>
+                    <br>
+
+                  <h4>Siguenos</h4>
+                    <div class="social-link">
+                       <ol>
+                         <a href="https://www.facebook.com/?locale=es_LA"><i class="fab fa-facebook-f"></i></a>
+                         <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                         <a href="https://twitter.com/?lang=es"><i class="fab fa-twitter"></i></a>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Ubicación</h4>
+                    <div class="mapa">
+                        <li><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d821.5796750683584!2d-58.45998977155011!3d-34.54548529830391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb426cfb55dc7%3A0x597e74d62bbc0bf2!2sNu%C3%B1ez%201511%2C%20C1429%20CABA!5e0!3m2!1ses-419!2sar!4v1696517916131!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></li>
+                    </div>
+                </div>
+               
+            </div>
+          
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="by"><p>&copy; CreArte 2023 </p></div>
+    </footer>
+ 
+    <script src="{% static './js/cerveceria.js' %}"></script>
+    <script src="{% static './js/botontop.js' %}"></script>
+    <script src="{% static './js/form.js' %}"></script>
+
+   
+    
+       
+</body>
+</html>
+
